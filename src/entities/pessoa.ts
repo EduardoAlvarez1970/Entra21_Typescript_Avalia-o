@@ -18,10 +18,6 @@ class Pessoa {
         this.celular = celular;
         this.email = email;
     }
-
-    public exibirDataNascimento(dataNascimento: Date){
-        return this.dataNascimento
-    }
 }
 
 export default Pessoa;
