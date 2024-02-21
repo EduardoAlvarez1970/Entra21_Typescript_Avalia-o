@@ -18,7 +18,13 @@ class Pessoa {
         this.celular = celular;
         this.email = email;
     }
+
+    public setDataNascimento(): Date {
+      return this.dataNascimento;
+  }
 }
 
 export default Pessoa;
+
+//OK
 
