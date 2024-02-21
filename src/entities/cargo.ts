@@ -10,3 +10,5 @@ class Cargo {
 }
 
   export default Cargo;
+
+  ///OK
