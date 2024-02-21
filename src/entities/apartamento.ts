@@ -1,12 +1,12 @@
-import  Morador  from "./morador";
+import Morador from "./morador";
 
 class Apartamento {
-    private moradores: Morador[] = [];
     private bloco: string;
     private numero: number;
     private nomeProprietario: string;
+    private moradores: Morador[] = [];
   
-    constructor(bloco: string, numero: number, nomeProprietario: string) {
+    constructor(bloco: string, numero: number, nomeProprietario: string, moradores: Morador) {
         this.bloco = bloco;
         this.numero = numero;
         this.nomeProprietario = nomeProprietario;
