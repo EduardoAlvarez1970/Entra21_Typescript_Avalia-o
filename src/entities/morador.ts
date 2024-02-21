@@ -15,3 +15,5 @@ class Morador {
 }
 
 export default Morador;
+
+//OK 
