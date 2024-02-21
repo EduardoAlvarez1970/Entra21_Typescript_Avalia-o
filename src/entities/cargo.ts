@@ -6,7 +6,6 @@ class Cargo {
       this.descricao = descricao;
       this.cargaHoraria = cargaHoraria;
     }
-
 }
 
   export default Cargo;

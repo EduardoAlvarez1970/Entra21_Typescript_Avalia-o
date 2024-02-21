@@ -25,3 +25,4 @@ class Pessoa {
 }
 
 export default Pessoa;
+

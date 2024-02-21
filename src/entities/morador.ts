@@ -1,7 +1,7 @@
 import Apartamento from "./apartamento";
 import Pessoa from "./pessoa";
 
-class Morador {
+class Morador extends Pessoa {
     private pessoa: Pessoa;
     private apartamento: Apartamento;
 
@@ -18,3 +18,19 @@ class Morador {
 }
 
 export default Morador;
+
+// 5. Classe Morador
+class Morador extends Pessoa {
+    constructor(
+      nome: string,
+      cpf: string,
+      dataNascimento: Date,
+      endereco: Endereco,
+      telefone: string,
+      celular: string,
+      email: string,
+      private apartamento: Apartamento
+    ) {
+      super(nome, cpf, dataNascimento, endereco, telefone, celular, email);
+    }
+  }
