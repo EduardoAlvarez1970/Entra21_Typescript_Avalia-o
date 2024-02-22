@@ -4,9 +4,9 @@ class Apartamento {
     private bloco: string;
     private numero: number;
     private nomeProprietario: string;
-    private moradores: Morador[] = [];
+    private moradores: Morador[];
   
-    constructor(bloco: string, numero: number, nomeProprietario: string, moradores: Morador) {
+    constructor(bloco: string, numero: number, nomeProprietario: string) {
         this.bloco = bloco;
         this.numero = numero;
         this.nomeProprietario = nomeProprietario;
@@ -17,13 +17,10 @@ class Apartamento {
       this.moradores.push(morador);
     }
 
-    public getMoradoresMenoresIdade(): Morador[] {
-        const dataAtual = new Date();
-        return this.moradores.filter((morador) =>
-            (dataAtual.getFullYear() - morador.dataNascimento.getFullYear()) < 18
-        );
-      }
+    public menorDeIdade(): Array<Morador> {
+      return this.moradores.filter(morador => morador.getIdade() < 18);
     }
-
-
-export default Apartamento;
+  }
+  
+  
+  export default Apartamento;

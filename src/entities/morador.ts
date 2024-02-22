@@ -9,8 +9,15 @@ class Morador {
         this.pessoa = pessoa;
         this.apartamento = apartamento;
     }
-    public dataNascimento(): Date {
-        return this.pessoa.setDataNascimento();
+    public getIdade(): number {
+        const dataNascimento = this.pessoa.getDataNascimento();
+        const hoje = new Date();
+        const diferencaAnos = hoje.getFullYear() - dataNascimento.getFullYear();
+        return diferencaAnos;
+    }
+
+    getPessoa(): Pessoa {
+        return this.pessoa;
     }
 }
 

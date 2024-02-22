@@ -6,6 +6,10 @@ class Cargo {
       this.descricao = descricao;
       this.cargaHoraria = cargaHoraria;
     }
+
+    public getDescricao(){
+      return this.descricao
+  }
 }
 
   export default Cargo;

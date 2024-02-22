@@ -19,8 +19,12 @@ class Pessoa {
         this.email = email;
     }
 
-    public setDataNascimento(): Date {
-      return this.dataNascimento;
+    public getNome(){
+      return this.nome
+  }
+
+  public getDataNascimento(){
+      return this.dataNascimento
   }
 }
 

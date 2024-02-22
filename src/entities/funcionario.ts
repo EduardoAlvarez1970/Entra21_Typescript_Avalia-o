@@ -11,6 +11,14 @@ class Funcionario {
         this.cargo = cargo;
         this.salario = salario;
     }
+
+    public getCargo(){
+        return this.cargo
+    }
+
+    public getSalario(){
+        return this.salario
+    }
 }
 
 export default Funcionario;
