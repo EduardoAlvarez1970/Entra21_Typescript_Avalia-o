@@ -5,8 +5,8 @@ import Funcionario from "./entities/funcionario";
 import Morador from "./entities/morador";
 import Pessoa from "./entities/pessoa";
 
-const Zelador = new Cargo("Zelador", 40);
-const Sindico = new Cargo("Sndico", 30);
+const zelador = new Cargo("Zelador", 40);
+const sindico = new Cargo("Sndico", 30);
 
 const endereco1 = new Endereco("Av Dos Buzios 3333", "Jurere", "Florianopolis", "SC", 88053700)
 const endereco2 = new Endereco("Rua das Baleias 223", "Jurere", "Florianopolis", "SC", 88053700)
@@ -19,9 +19,9 @@ const pessoa5 = new Pessoa("Pepe Chatruc", 80117532912, new Date(1988,5,2), ende
 const pessoa6 = new Pessoa("David Beckham", 80117532913, new Date(1990,12,2), endereco2, 48-9559-5588, 49-5555-4444, "davidbeckz@gmail.com")
 
 
-const funcionario1 = new Funcionario(pessoa1, Zelador, 4000)
-const funcionario2 = new Funcionario(pessoa2, Zelador, 4000)
-const funcionario3 = new Funcionario(pessoa3, Sindico, 5500)
+const funcionario1 = new Funcionario(pessoa1, zelador, 4000)
+const funcionario2 = new Funcionario(pessoa2, zelador, 4000)
+const funcionario3 = new Funcionario(pessoa3, sindico, 5500)
 
 const listaFuncionarios = [funcionario1, funcionario2, funcionario3]
 
@@ -44,4 +44,9 @@ apartamento2.adicionarMorador(morador2);
 apartamento2.adicionarMorador(morador3);
 
 const listaApartamentos = [ apartamento1, apartamento2]
+
+const menoresDeIdade = listaApartamentos.flatMap(apartamento => apartamento.menorDeIdade())
+
+console.log("Moradores menores de idade: ")
+menoresDeIdade.forEach(menor => console.log(menor.getPessoa().getNome()))
 

@@ -2,7 +2,7 @@ import Pessoa from "./pessoa";
 import Apartamento from "./apartamento";
 
 class Morador {
-    protected pessoa: Pessoa;
+    private pessoa: Pessoa;
     private apartamento: Apartamento;
     
     constructor(pessoa: Pessoa, apartamento: Apartamento){
